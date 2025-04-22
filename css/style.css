@@ -14,7 +14,6 @@
 }
 
 .hero__title {
-  /* font-size: 120px; */
   font-size: clamp(38px, 9.02vw, 120px);
   line-height: 1;
 }
@@ -25,8 +24,22 @@
   row-gap: 20px;
 }
 
-.hero__link {
-  /* font-size: 28px; */
+.hero__item {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.hero__item-text {
+  font-size: clamp(18px, 2.15vw, 28px);
+}
+
+.hero__item-links {
+  display: flex;
+  column-gap: 20px;
+}
+
+.hero__item-link {
   font-size: clamp(18px, 2.15vw, 28px);
   line-height: 1.2;
 }

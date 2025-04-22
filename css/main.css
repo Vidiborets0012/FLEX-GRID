@@ -1,6 +1,7 @@
 :root {
   --color-dark: #000000;
-  --color-dark-alternate: #131619;
+  --color-dark-alternate: #131313;
+  --color-dark-alternate-1: #0f0f0f;
   --color-light: #ffffff;
   --color-dark-gray: #404040;
   --color-light-gray: #c4c4c4;
@@ -22,7 +23,6 @@ h6 {
 
 a {
   color: var(--color-light);
-  text-decoration: none;
   text-transform: uppercase;
 }
 
