@@ -1,0 +1,29 @@
+.flex__item,
+.grid__item {
+  padding: 8px;
+  border: 1px solid var(--color-dark-gray);
+}
+
+.flex {
+  display: flex;
+  gap: 10px 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px 20px;
+  grid-auto-flow: column;
+  justify-content: start;
+}
+
+.flex-adaptive {
+  display: flex;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.grid-adaptive {
+  display: grid;
+  gap: 10px 20px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
