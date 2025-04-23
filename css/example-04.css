@@ -1,0 +1,63 @@
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.flex::before {
+  content: '';
+  background-image: url('../icons/smile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  /* керування розміром */
+  flex-basis: 40px;
+  aspect-ratio: 1/1;
+
+  /* заборона зменшуватися */
+  flex-shrink: 0;
+  /* центрування */
+  align-self: flex-start;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 10px;
+
+  /* конструкція та керування розміром */
+  grid-template-columns: 40px 1fr;
+
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.flex.inline-flex {
+  display: inline-flex;
+}
+
+.inline-flex.flex::before {
+  /* замість   flex-basis: 40px; */
+  width: 40px;
+}
+
+.grid.inline-grid {
+  display: inline-grid;
+}
+
+.grid::before {
+  content: '';
+  background-image: url('../icons/smile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  /* керування розміром */
+  aspect-ratio: 1/1;
+  /* центрування */
+  align-self: flex-start;
+}
