@@ -1,0 +1,40 @@
+.flex {
+  display: flex;
+  gap: 10px 20px;
+
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.flex__image {
+  /* у випадку, коли flex-улумент це зображення,
+  необхідно використовувати width / inline-size */
+  width: 120px;
+
+  /* заборона розтягування зображення */
+  align-self: flex-start;
+}
+
+.flex__text {
+  flex-grow: 1;
+}
+
+.grid {
+  display: grid;
+  gap: 10px 20px;
+
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.1);
+
+  /* Конструкція та керування розміром */
+  /* grid-template-columns: 120px 1fr; */
+}
+
+.grid:has(.grid__image) {
+  grid-template-columns: 120px 1fr;
+}
+
+.grid__image {
+  /* адаптивний розмір для зображення */
+  max-width: 100%;
+}

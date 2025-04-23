@@ -44,6 +44,10 @@ a:hover {
   color: var(--color-light-gray);
 }
 
+a img:hover {
+  scale: 1.2;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
