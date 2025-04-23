@@ -1,9 +1,6 @@
 .flex {
   display: flex;
   gap: 10px 20px;
-
-  padding: 10px;
-  background-color: rgb(255, 255, 255, 0.1);
 }
 
 .flex__image {
@@ -22,9 +19,6 @@
 .grid {
   display: grid;
   gap: 10px 20px;
-
-  padding: 10px;
-  background-color: rgb(255, 255, 255, 0.1);
 
   /* Конструкція та керування розміром */
   /* grid-template-columns: 120px 1fr; */

@@ -2,9 +2,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
-  padding: 10px;
-  background-color: rgb(255, 255, 255, 0.1);
 }
 
 .flex::before {
@@ -31,9 +28,6 @@
 
   /* конструкція та керування розміром */
   grid-template-columns: 40px 1fr;
-
-  padding: 10px;
-  background-color: rgb(255, 255, 255, 0.1);
 }
 
 .flex.inline-flex {

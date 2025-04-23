@@ -1,0 +1,74 @@
+.flex__item,
+.grid__item {
+  padding: 8px;
+  border: 1px solid var(--color-dark-gray);
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flex__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* можливість збільшуватися */
+  flex-grow: 1;
+
+  /* мінімальна ширина колонки */
+  flex-basis: 300px;
+  flex-shrink: 0;
+}
+
+.flex__item-text {
+  /* можливість збільшуватися */
+  flex-grow: 1;
+}
+
+/* Спроба відтворення поведінки grid auto fill */
+@media (min-width: 1022px) {
+  .flex__item {
+    max-width: 31.6%;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+
+  /* звичайна конструкція */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* однакова висота рядка */
+  /* grid-auto-rows: 1fr; */
+}
+
+@media (min-width: 702px) {
+  .grid {
+    grid-auto-rows: 1fr;
+  }
+}
+
+.grid__item {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+}
+
+.grid.grid--auto-fill {
+  /* чітка конструкція, незалежно від html-елементів */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grid.grid--auto-fit {
+  /* заповнення порожнього місця */
+  grid-template-columns: repeat(auto-fit, minmax(300, 1fr));
+}
+
+.grid.grid--min {
+  /* рішення для великих колонок */
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+}
