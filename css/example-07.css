@@ -1,0 +1,67 @@
+.flex-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  padding: 0;
+}
+
+.flex__item {
+  padding: 10px;
+  /* flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 250px; */
+  flex: 1 0 400px;
+
+  border: 1px solid var(--color-light-gray);
+}
+
+/* шаховий порядок */
+.flex:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.grid-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+  padding: 0;
+}
+
+.grid__item {
+  padding: 10px;
+  border: 1px solid var(--color-light-gray);
+}
+
+@media (max-width: 500px) {
+  .flex__item {
+    flex-basis: 250px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 872px) {
+  .grid:nth-child(even) .grid__item:nth-child(1) {
+    order: 1;
+  }
+
+  .grid:nth-child(even) .grid__item:nth-child(2) {
+    order: 0;
+  }
+}
